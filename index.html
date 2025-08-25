@@ -14,9 +14,9 @@
         /* --- 全局与主题样式 --- */
         :root {
             --bg-color: #fce4ec;
-            --primary-color: #ff80ab;
-            --secondary-color: #f48fb1;
-            --accent-color: #90caf9;
+            --primary-color: #a0a0a0;
+            --secondary-color: #A0A0A0;
+            --accent-color: #D7EAF9;
             --text-color: #444;
             --white-color: #fff;
             --border-radius: 18px;
@@ -6048,7 +6048,7 @@ function generatePrivateSystemPrompt(character) {
     c) 语音消息: [${character.realName}的语音：{语音内容}]
     d) 照片/视频: [${character.realName}发来的照片/视频：{描述}]
     e) 给我的转账: [${character.realName}的转账：{金额}元；备注：{备注}]
-    f) 表情包/图片: [${character.realName}发送的表情包：{表情包路径}]。
+    f) 表情包/图片: [${character.realName}：{表情包路径}]。
     g) 对我礼物的回应(此条不显示): [${character.realName}已接收礼物]
     h) 对我转账的回应(此条不显示): [${character.realName}接收${character.myName}的转账] 或 [${character.realName}退回${character.myName}的转账]
     i) 更新状态(此条不显示): [${character.realName}更新状态为：{新状态}]
@@ -9788,7 +9788,7 @@ function cancelQuoteReply() {
     color: var(--text-color, #444);
   }
   .bottom-nav .nav-btn.active {
-    background: var(--primary-color, #ff80ab);
+    background: var(--primary-color, #a0a0a0);
     color: #fff;
     box-shadow: 0 6px 16px rgba(255,128,171,0.22);
   }
@@ -12468,5 +12468,6 @@ fileInput.addEventListener('change', async (e)=>{
 <div id="mention-panel" class="mention-panel"></div>
 <!-- ... (El resto de los scripts y styles finales) ... -->
 </body>
+
 
 </html>
