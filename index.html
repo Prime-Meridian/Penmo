@@ -22,7 +22,7 @@
             --border-radius: 18px;
             --phone-corner-radius: 0px;
             --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            --top-pinned-bg: #fff0f5;
+            --top-pinned-bg: #DFF1F5;
             --online-status-color: #4CAF50;
         }
 
@@ -1274,62 +1274,107 @@
             flex-shrink: 0;
         }
 
-        .message-input-area {
-            display: flex;
-            align-items: center;
-            padding: 10px;
-            padding-bottom: calc(10px + env(safe-area-inset-bottom));
-            border-top: 1px solid #eee;
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(10px);
-            flex-shrink: 0;
-            gap: 10px;
-            border-bottom-left-radius: var(--phone-corner-radius);
-            border-bottom-right-radius: var(--phone-corner-radius);
-            overflow: hidden;
-        }
+		.message-input-area {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    padding-bottom: calc(10px + env(safe-area-inset-bottom));
+    border-top: 1px solid #eee;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    flex-shrink: 0;
+    gap: 10px;
+    border-bottom-left-radius: var(--phone-corner-radius);
+    border-bottom-right-radius: var(--phone-corner-radius);
+    overflow: hidden;
+}
 
-        .message-input-area input {
-            flex-grow: 1;
-            border: none;
-            padding: 12px;
-            border-radius: 18px;
-            background-color: #f0f0f0;
-        }
+.message-input-area input {
+    flex-grow: 1;
+    border: none;
+    padding: 12px;
+    border-radius: 18px;
+    background-color: #f0f0f0;
+}
 
-        .message-input-area input:focus {
-            outline: none;
-        }
+.message-input-area input:focus {
+    outline: none;
+}
 
-        .message-input-area .icon-btn {
-            background: var(--primary-color);
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            cursor: pointer;
-            flex-shrink: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: background-color 0.2s;
-        }
+.message-input-area .icon-btn {
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s;
+    padding: 0;
+    /* 移除背景色，让图片显示 */
+    background-color: transparent !important;
+}
 
-        .message-input-area .icon-btn:disabled {
-            background-color: #cccccc;
-            cursor: not-allowed;
-        }
+.message-input-area .icon-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
 
-        .message-input-area .icon-btn svg {
-            width: 20px;
-            height: 20px;
-            fill: currentColor;
-        }
+/* 发送按钮 */
+.message-input-area .icon-btn.send-btn {
+    background-image: url('https://i.postimg.cc/dkTzxGxN/5d445968avd8a01ec11d6fd54017c0af.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* 移除字体相关样式 */
+    font-size: 0;
+    color: transparent;
+}
 
-        .message-input-area .icon-btn.send-btn {
-            font-size: 18px;
-        }
+/* 接收按钮 */
+.message-input-area .icon-btn.receive-btn {
+    background-image: url('https://i.postimg.cc/Fk5257tr/8a08b01b6l3b0f930472c84f5f3e6577.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* 隐藏SVG图标 */
+.message-input-area .icon-btn svg {
+    display: none;
+}
+      
+#get-reply-btn {
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s;
+    padding: 0;
+    background-color: transparent !important;
+    background-image: url('https://i.postimg.cc/Fk5257tr/8a08b01b6l3b0f930472c84f5f3e6577.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 0;
+    color: transparent;
+}
+
+#get-reply-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#get-reply-btn svg {
+    display: none;
+}
 
         #multi-select-bar {
             position: absolute;
@@ -12471,3 +12516,4 @@ fileInput.addEventListener('change', async (e)=>{
 
 
 </html>
+
